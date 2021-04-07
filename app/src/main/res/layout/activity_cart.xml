@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+    <ImageView
+        android:id="@+id/img1_menu"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/title1_name_food"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="56dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img1_menu"
+        app:layout_constraintTop_toTopOf="@id/img1_menu" />
+
+    <TextView
+        android:id="@+id/name1_cafe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/title1_name_food"
+        app:layout_constraintStart_toStartOf="@id/title1_name_food"
+        app:layout_constraintTop_toBottomOf="@+id/title1_name_food" />
+    <ImageView
+        android:id="@+id/icon1_count_like"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/name1_cafe"
+        app:layout_constraintTop_toBottomOf="@id/name1_cafe"
+        android:src="@drawable/ic_action_star_10"
+        android:contentDescription="TODO" />
+    <TextView
+        android:id="@+id/txt1_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/icon1_count_like"
+        app:layout_constraintTop_toTopOf="@id/icon1_count_like"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:text="@string/_0_0"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/ratings1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/txt1_like"
+        app:layout_constraintTop_toTopOf="@id/txt1_like"
+        android:textSize="16sp"
+        android:text="@string/ratings"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/txt1_count_like"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ratings1"
+        app:layout_constraintTop_toTopOf="@id/ratings1"
+        app:layout_constraintEnd_toEndOf="@id/name1_cafe"
+        android:textSize="16sp"
+        android:paddingStart="8dp"
+        android:text="@string/_0"/>
+
+
+    <ImageView
+        android:id="@+id/icon1_like_heart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_action_heart"
+        app:layout_constraintStart_toEndOf="@id/title1_name_food"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:contentDescription="TODO" />
+    <ImageView
+        android:id="@+id/icon1_add_cart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@id/icon1_like_heart"
+       app:layout_constraintTop_toTopOf="@+id/txt1_count_like"
+        app:layout_constraintBottom_toBottomOf="@id/txt1_count_like"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_action_cart"
+        android:clickable="true"
+        android:focusable="true" />
+    <ImageView
+        android:id="@+id/icon1_remove"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@id/icon1_like_heart"
+        app:layout_constraintTop_toBottomOf="@id/icon1_like_heart"
+        android:layout_marginVertical="4dp"
+        android:src="@drawable/ic_action_trash"
+        android:clickable="true"
+        android:focusable="true" />
+</androidx.constraintlayout.widget.ConstraintLayout>
